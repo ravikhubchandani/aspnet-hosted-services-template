@@ -1,6 +1,7 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 using Quartz;
 using System;
 
@@ -10,7 +11,6 @@ namespace BackgroundServices
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Starting background services");
             CreateHostBuilder(args).Build().Run();
         }
 
@@ -24,6 +24,7 @@ namespace BackgroundServices
                     {
                         q.UseMicrosoftDependencyInjectionScopedJobFactory();
                         IServiceProvider sp = services.BuildServiceProvider();
+                        services.AddLogging(logs => logs.AddConsole());
 
                         // Add new jobs here
                         q.AddHelloWorldJob(sp, settings);
