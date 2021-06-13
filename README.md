@@ -8,4 +8,4 @@ Template for processes to run in background based on a cron schedule
 
 ## Extra
 * Add dependency resolvers in Program.cs https://github.com/ravikhubchandani/aspnet-hosted-services-template/blob/master/src/BackgroundServices/BackgroundServices/Program.cs
-* * Add settings entries in appsettings.json (https://github.com/ravikhubchandani/aspnet-hosted-services-template/blob/master/src/BackgroundServices/BackgroundServices/appsettings.json) and ApplicationSettings.cs (https://github.com/ravikhubchandani/aspnet-hosted-services-template/blob/master/src/BackgroundServices/BackgroundServices/ApplicationSettings.cs)
+* Add settings entries in appsettings.json (https://github.com/ravikhubchandani/aspnet-hosted-services-template/blob/master/src/BackgroundServices/BackgroundServices/appsettings.json) and ApplicationSettings.cs (https://github.com/ravikhubchandani/aspnet-hosted-services-template/blob/master/src/BackgroundServices/BackgroundServices/ApplicationSettings.cs)
