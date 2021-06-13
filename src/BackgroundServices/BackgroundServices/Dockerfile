@@ -19,4 +19,4 @@ FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "BackgroundServices.dll"]
-#CMD ASPNETCORE_URLS=http://*:$PORT dotnet HerokuDockerTest.dll
+#CMD ASPNETCORE_URLS=http://*:$PORT dotnet BackgroundServices.dll
