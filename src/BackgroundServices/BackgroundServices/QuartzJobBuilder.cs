@@ -18,7 +18,7 @@ namespace BackgroundServices
         private static void AddMappedJob<T>(this IServiceCollectionQuartzConfigurator quartz, JobDataMap data, string serviceName, string serviceSchedule) where T : IJob
         {
             var jobKey = new JobKey($"{serviceName}{Guid.NewGuid()}");
-            quartz.AddJob<HelloWorldService>(o => o.WithIdentity(jobKey));
+            quartz.AddJob<T>(o => o.WithIdentity(jobKey));
             quartz.AddTrigger(o => o
                 .ForJob(jobKey)
                 .WithCronSchedule(serviceSchedule)
