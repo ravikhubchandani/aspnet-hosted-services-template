@@ -10,10 +10,10 @@ WORKDIR /src
 COPY BackgroundServices.csproj .
 RUN dotnet restore "BackgroundServices.csproj"
 COPY . .
-RUN dotnet build "BackgroundServices.csproj" -c Debug -o /app/build
+RUN dotnet build "BackgroundServices.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "BackgroundServices.csproj" -c Debug -o /app/publish
+RUN dotnet publish "BackgroundServices.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app

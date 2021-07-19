@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using BackgroundServices.Core;
+using Microsoft.Extensions.Logging;
 using Quartz;
 using System;
 using System.Threading.Tasks;
@@ -18,7 +19,7 @@ namespace BackgroundServices.Jobs
 
         private void RunMainProcess()
         {
-            _logger.LogInformation($"{DateTime.Now:yyyy-MM-dd hh:mm:ss}: Hello World!");
+            _logger.LogInformation($"{FriendlyTimeGenerator.GetCurrentTime()}: Hello World!");
         }
     }
 }
